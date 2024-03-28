@@ -15,3 +15,5 @@ a
 1src/test/java/typicode/get/post-body-request.json,b\8\b8ad4e602bd5bf7e833d2b2541c1b6fcce25b6de
 h
 8src/test/java/typicode/get/successful-response-post.json,a\6\a67975773f5cb0a7b90ee22b97fecc332e79d484
+Y
+)target/karate-reports/karate-summary.html,d\d\dd740bc54356931a6fcf1a1191eb7e73350b161d
