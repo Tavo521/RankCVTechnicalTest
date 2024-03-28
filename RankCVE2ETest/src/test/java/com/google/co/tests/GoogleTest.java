@@ -4,10 +4,9 @@ import com.google.co.pages.GooglePage;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 
-import java.util.concurrent.TimeUnit;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class GoogleTest {
     private WebDriver driver;
@@ -26,9 +25,9 @@ public class GoogleTest {
     @Test
     void test() throws InterruptedException {
         googlePage.search();
-        JavascriptExecutor js = (JavascriptExecutor) driver;
-        js.executeScript("window.scrollTo(0, document.body.scrollHeight)");
+        googlePage.scrollDown(driver);
         googlePage.joinPage();
+        assertEquals("Used Cars for Sale in London | Great Local Deals | Gumtree", googlePage.getTitle(driver));
     }
 
     @AfterEach

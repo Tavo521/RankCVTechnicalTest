@@ -10,7 +10,7 @@ Feature: Get a random user
 
 
   Scenario: Get a random user and print his email
-    Given path 'users/' + random
+    Given path 'users/' + 1
     When method get
     Then status 200
     And match $ == responseSuccessfulGetUser
@@ -18,7 +18,7 @@ Feature: Get a random user
 
   Scenario: Get posts from user and verify id
     Given path 'posts'
-    And param userId = random
+    And param userId = 1
     When method get
     Then status 200
     And match $ == responseSuccessfulGetPost
